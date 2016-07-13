@@ -1,0 +1,97 @@
+
+
+hospital
+
+~high performer / low / avg
+# beds, 
+cost, outcome, patexp
+
+
+
+tags
+~ small, low performer
+~ small, high performer
+~ large, low performer
+
+~huge
+
+
+~ large, high performer
+~ large
+~ small
+
+
+Massachusetts General Hospital
+high-cost, high performer
+.98 size
+.75 outcome
+.89 patexp
+.76 percentile cost
+
+Edward Sparrow Hospital
+large, average
+size
+outcome
+patexp
+cost
+
+Robert Wood Johnson University Hospital
+large, low-performer
+size .9
+outcome .2
+patexp .05
+cost .96
+
+Carolina East Medical Center
+large, high-performer
+size .82
+outcome .84
+patexp .91
+cost .16
+
+Southwestern Vermont Medical Center
+small, high-performer
+size  .20
+outcome .95
+patexp .95
+cost .07
+
+Palms West Hospital
+small, low-performer
+size  .15
+outcome .20
+patexp .05
+cost .85
+
+Plains Regional Medical Center
+small, average
+size  .05
+outcome .55
+patexp .50
+cost .45
+
+provider_id	provider	cost	discharge	patexp	outcome	category
+220071	MASSACHUSETTS GENERAL HOSPITAL	0.76	0.98	0.89	0.75	large
+230230	EDWARD W SPARROW HOSPITAL	0.48	0.93	0.44	0.51	large, average
+310038	ROBERT WOOD JOHNSON UNIVERSITY HOSPITAL	0.96	0.9	0.19	0.06	large, low-performer
+340131	CAROLINA EAST MEDICAL CENTER	0.16	0.82	0.84	0.91	large, high-performer
+470012	SOUTHWESTERN VERMONT MEDICAL CENTER	0.07	0.18	0.93	0.98	small, high performer
+100269	PALMS WEST HOSPITAL	0.85	0.15	0.04	0.18	small, low performer
+320022	PLAINS REGIONAL MEDICAL CENTER	0.48	0.04	0.48	0.54	small, average
+
+
+
+lower callouts
+
+High-cost hospitals tend to have a lower patient experience.
+No other variables correlate.
+
+breakdown by cost (top 50, lower 50)
+
+Paying more will get you a slightly lower care experience, but will not change your procedure outcome.
+Large and small hospitals perform equally well in all categories.
+
+
+high outcome, high cost
+
+

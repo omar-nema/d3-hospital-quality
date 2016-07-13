@@ -1,0 +1,6 @@
+type,value,pre
+time in min,20,60
+# commands,10,88
+energy in joule,30,55
+caffeine in mg,10,80
+time to graph,105,105

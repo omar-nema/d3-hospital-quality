@@ -1,0 +1,9 @@
+[cost variance]
+
+	by demographics
+	by location
+	risk
+
+matching patient ideas to right hospital
+
+risk and # of checks / tests

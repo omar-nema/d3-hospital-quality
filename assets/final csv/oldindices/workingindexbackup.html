@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+
+.axis text{
+   font: 12px monospace;
+}
+.chart text{
+   font: 8px monospace;
+}
+ .secondman {
+  font: 80px monospace;
+  transform: rotate(-90deg);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+/*  stroke: #000;*/
+  stroke: lightgrey;
+  shape-rendering: crispEdges;
+
+}
+.axis line2 {
+  fill: none;
+  stroke: blue;
+  shape-rendering: crispEdges;
+
+}
+
+.x.axis path {        
+  display: none;
+}
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 80px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 8px monospace;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
+/*div.tooltip2 { 
+    position: absolute;     
+    text-align: center;     
+    width: 400px;          
+    height: 40px;         
+    padding: 2px;       
+    font: 10px monospace;    
+/*    background: lightsteelblue; */
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}*/
+
+
+
+</style>
+<head>
+</head>
+<body>
+<svg class="chart">
+
+</svg>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script>
+
+  var margin = {top: 20, right: 40, bottom: 30, left: 40},
+    width = 800 - margin.left - margin.right,
+    height = 400 - margin.top- - margin.bottom;
+
+  var ycost = d3.scale.linear().range([height, 0]);
+  var yincome = d3.scale.linear().range([height, 0]);
+  var yquality = d3.scale.linear().range([height, 0]);
+  var yinsured = d3.scale.linear().range([height, 0]);
+  var yaxiscost = d3.svg.axis().scale(ycost).orient("left").tickSize(0);
+  var yaxisincome = d3.svg.axis().scale(yquality).orient("left").tickSize(0).tickValues([]);
+  var yaxisquality = d3.svg.axis().scale(yinsured).orient("left").tickSize(0).tickValues([]);
+  var yaxisinsured = d3.svg.axis().scale(yincome).orient("left").tickSize(0).tickValues([]);
+  var z = d3.scale.ordinal().range([ "#aad", "#556"]);
+
+
+  // Define the div for the tooltip
+  var div = d3.select("body").append("div") 
+      .attr("class", "tooltip")       
+      .style("opacity", 0);
+  var div2 = d3.select("body").append("div") 
+      .attr("class", "tooltip2")       
+      .style("opacity", 0);
+
+  var chart = d3.select(".chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+  d3.csv('data.csv',function(data){
+
+              ycost.domain([0, 100]);
+          yincome.domain([0, 100]);
+          yquality.domain([0, 10]);
+          yinsured.domain([0, 100]);
+
+      //break up columns into variables, combine into alldata , PRESCALE            
+        var cost = data.map(function(d){    
+                    return ycost(+d.cost);
+                });
+        var costval = data.map(function(d){    
+                    return +d.costval;
+                });
+        var income = data.map(function(d){    
+                    return yincome(+d.income);
+                });
+        var incomeval = data.map(function(d){    
+                    return +d.incomeval;
+                });      
+       var quality = data.map(function(d){    
+                    return yquality(+d.quality);
+                }); 
+         var insured = data.map(function(d){    
+                    return yinsured(+d.insured);
+                });     
+
+
+      var alldata = [cost, costval, income, incomeval, quality, insured];
+      var alldata2 =  [cost, income, quality, insured];
+
+      //put things in array for for loop
+      var x1 = 0;
+      var x2 = width/4 ;
+      var x3 = width/2 ;
+      var x4 = width*3/4 ;
+      var xvalues = [0, x2, x3, x4];
+      var y1values = [data[0].cost, data[0].income, data[0].quality, data[0].insured];
+      var xvalues = [x1, x2, x3, x4];
+
+      var circlesize = [700, 1000, 200, 200];
+      //array created for scales, axes so that correct object is applied in for loop
+      var scales = [ycost, yincome, yquality, yinsured];
+      var yaxes = [yaxiscost, yaxisincome, yaxisquality, yaxisinsured];
+      //result var created 
+      var result = [];
+      var dummysize = []
+    
+      //create array of same size for num rows
+
+      //for LINE  
+      //below getting y values (rows) of data to create lines
+      function transpose(a) {
+          return Object.keys(a[0]).map(
+              function (c) { return a.map(function (r) { return r[c]; }); }
+              );
+          }
+        var yvalrows = transpose(alldata2);
+
+        //create dummy sizes for quality and income
+        yvalrows.forEach(function(d, i){
+            dummysize[i] = 8;
+        })
+        var numRows =  yvalrows.length;
+        var numColumns = alldata2.length;
+
+
+        //create 2d array for line x values
+        var xvalrows = [];
+
+            for (j = 0; j < numRows; j++) { 
+                xvalrows.push(xvalues);
+            }
+
+        // for (i = 0; i < numRows; i++) { 
+        //       var inner = [];
+        //      for (j = 0; j < numColumns; j++) { 
+        //         inner.push(xvalues);
+        //     }
+        //     xvalrows.push(inner)
+        // }
+
+        
+      var size = [costval, incomeval, dummysize, dummysize];
+      var scaleFactor = [1500, 7000, 1, 1];
+
+      //ay u want circles?
+      alldata2.forEach(function(d, i) {
+          //i from 0 to 3, for each axis
+          chart.append('g').attr('class', 'y axis').call(yaxes[i]).attr("transform", "translate(" + xvalues[i] + ",0)");
+           result[i] = chart.selectAll("g.result[i]").data(alldata2[i]);
+           result[i].exit().remove();
+            result[i].enter().append("chart:g").attr('class', 'result');
+          var circlebuild =  result[i].selectAll('circle').data(alldata2[i]);
+          circlebuild.exit().remove();
+          circlebuild.enter().append('circle');
+          var currscale = scales[i];
+          var currVal = alldata2[i];
+          var currsize = size[i];
+          var currsizescale = scaleFactor[i];
+          result[i].selectAll('circle')   
+            .transition()
+            .duration(1000)
+            .attr("cx", xvalues[i])
+            .attr("cy", function(d, i) { return currVal[i]; }) //can take str8 arrays! d, i based off array 
+            .attr("r", function(d, i) { return currsize[i]/currsizescale; });
+
+    }); //(ay u like dem circles)
+
+    //ay u want lines?
+     
+        // var lineClassHolder = [];`
+
+        yvalrows.forEach(function(d, i){ //for each row, create a line
+                  var currxvalrows = xvalrows[i];
+                  var curryvalrows = yvalrows[i];
+
+                  var currdata = [currxvalrows, curryvalrows];
+                  var currTrans = transpose(currdata);
+                 // console.log(currdata);
+                 // console.log(currTrans);
+
+                  var line = d3.svg.line()
+                        .x(function(d, i) {
+                            return d[0]; //formatted as 4 col, x row array
+                        })
+                        .y(function(d, i) {
+                            return d[1];
+                        })
+                        .interpolate("basis");
+
+  
+                chart.append("polyline")
+                   .style("stroke", "black") 
+                    .style("fill", "none")    
+                    .attr("points", currTrans);  
+
+                    // .datum(currdata)
+                    // .attr("class", "line")
+                    // .attr("d", line);
+
+                        // chart.append('svg:path')
+                        // .attr('d', line(currTrans))
+                        // .attr('stroke-width', 2)
+                        // // .attr('id', 'line_')
+                        // .attr('fill', 'none');
+
+        })
+
+       
+ 
+});
+
+ 
+
+
+
+</script>
+
+
+
+
+
+
+

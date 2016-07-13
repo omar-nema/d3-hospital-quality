@@ -1,0 +1,173 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HC01_EST_VC68,Total; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance
+HC01_MOE_VC68,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance
+HC02_EST_VC68,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance
+HC02_MOE_VC68,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance
+HC03_EST_VC68,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance
+HC03_MOE_VC68,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance
+HC04_EST_VC68,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance
+HC04_MOE_VC68,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance
+HC05_EST_VC68,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance
+HC05_MOE_VC68,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance
+HC01_EST_VC69,Total; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC01_MOE_VC69,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC02_EST_VC69,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC02_MOE_VC69,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC03_EST_VC69,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC03_MOE_VC69,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC04_EST_VC69,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC04_MOE_VC69,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC05_EST_VC69,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC05_MOE_VC69,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Private health insurance - Private health insurance alone
+HC01_EST_VC70,Total; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC01_MOE_VC70,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC02_EST_VC70,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC02_MOE_VC70,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC03_EST_VC70,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC03_MOE_VC70,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC04_EST_VC70,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC04_MOE_VC70,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC05_EST_VC70,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC05_MOE_VC70,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance
+HC01_EST_VC71,Total; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC01_MOE_VC71,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC02_EST_VC71,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC02_MOE_VC71,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC03_EST_VC71,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC03_MOE_VC71,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC04_EST_VC71,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC04_MOE_VC71,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC05_EST_VC71,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC05_MOE_VC71,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Employment-based health insurance - Employment-based health insurance alone
+HC01_EST_VC72,Total; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC01_MOE_VC72,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC02_EST_VC72,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC02_MOE_VC72,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC03_EST_VC72,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC03_MOE_VC72,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC04_EST_VC72,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC04_MOE_VC72,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC05_EST_VC72,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC05_MOE_VC72,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance
+HC01_EST_VC73,Total; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC01_MOE_VC73,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC02_EST_VC73,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC02_MOE_VC73,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC03_EST_VC73,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC03_MOE_VC73,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC04_EST_VC73,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC04_MOE_VC73,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC05_EST_VC73,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC05_MOE_VC73,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Direct-purchase health insurance - Direct-purchase health insurance alone
+HC01_EST_VC74,Total; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC01_MOE_VC74,Total; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC02_EST_VC74,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC02_MOE_VC74,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC03_EST_VC74,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC03_MOE_VC74,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC04_EST_VC74,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC04_MOE_VC74,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC05_EST_VC74,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC05_MOE_VC74,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage
+HC01_EST_VC75,Total; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC01_MOE_VC75,Total; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC02_EST_VC75,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC02_MOE_VC75,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC03_EST_VC75,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC03_MOE_VC75,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC04_EST_VC75,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC04_MOE_VC75,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC05_EST_VC75,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC05_MOE_VC75,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - TRICARE/military health coverage - TRICARE/military health coverage alone
+HC01_EST_VC76,Total; Estimate; HEALTH COVERAGE BY TYPE - Public coverage
+HC01_MOE_VC76,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage
+HC02_EST_VC76,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Public coverage
+HC02_MOE_VC76,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage
+HC03_EST_VC76,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Public coverage
+HC03_MOE_VC76,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage
+HC04_EST_VC76,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Public coverage
+HC04_MOE_VC76,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage
+HC05_EST_VC76,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Public coverage
+HC05_MOE_VC76,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage
+HC01_EST_VC77,Total; Estimate; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC01_MOE_VC77,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC02_EST_VC77,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC02_MOE_VC77,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC03_EST_VC77,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC03_MOE_VC77,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC04_EST_VC77,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC04_MOE_VC77,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC05_EST_VC77,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC05_MOE_VC77,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Public coverage - Public coverage alone
+HC01_EST_VC78,Total; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC01_MOE_VC78,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC02_EST_VC78,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC02_MOE_VC78,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC03_EST_VC78,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC03_MOE_VC78,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC04_EST_VC78,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC04_MOE_VC78,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC05_EST_VC78,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC05_MOE_VC78,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage
+HC01_EST_VC79,Total; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC01_MOE_VC79,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC02_EST_VC79,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC02_MOE_VC79,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC03_EST_VC79,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC03_MOE_VC79,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC04_EST_VC79,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC04_MOE_VC79,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC05_EST_VC79,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC05_MOE_VC79,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicare coverage - Medicare coverage alone
+HC01_EST_VC80,Total; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC01_MOE_VC80,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC02_EST_VC80,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC02_MOE_VC80,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC03_EST_VC80,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC03_MOE_VC80,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC04_EST_VC80,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC04_MOE_VC80,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC05_EST_VC80,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC05_MOE_VC80,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage
+HC01_EST_VC81,Total; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC01_MOE_VC81,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC02_EST_VC81,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC02_MOE_VC81,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC03_EST_VC81,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC03_MOE_VC81,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC04_EST_VC81,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC04_MOE_VC81,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC05_EST_VC81,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC05_MOE_VC81,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Medicaid/means-tested public coverage - Medicaid/means-tested public coverage alone
+HC01_EST_VC82,Total; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care
+HC01_MOE_VC82,Total; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care
+HC02_EST_VC82,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care
+HC02_MOE_VC82,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care
+HC03_EST_VC82,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care
+HC03_MOE_VC82,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care
+HC04_EST_VC82,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care
+HC04_MOE_VC82,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care
+HC05_EST_VC82,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care
+HC05_MOE_VC82,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care
+HC01_EST_VC83,Total; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC01_MOE_VC83,Total; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC02_EST_VC83,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC02_MOE_VC83,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC03_EST_VC83,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC03_MOE_VC83,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC04_EST_VC83,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC04_MOE_VC83,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC05_EST_VC83,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC05_MOE_VC83,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - VA Health Care - VA Health Care alone
+HC01_EST_VC84,Total; Estimate; HEALTH COVERAGE BY TYPE - Uninsured
+HC01_MOE_VC84,Total; Margin of Error; HEALTH COVERAGE BY TYPE - Uninsured
+HC02_EST_VC84,Number Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Uninsured
+HC02_MOE_VC84,Number Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Uninsured
+HC03_EST_VC84,Percent Uninsured; Estimate; HEALTH COVERAGE BY TYPE - Uninsured
+HC03_MOE_VC84,Percent Uninsured; Margin of Error; HEALTH COVERAGE BY TYPE - Uninsured
+HC04_EST_VC84,Number Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Uninsured
+HC04_MOE_VC84,Number Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Uninsured
+HC05_EST_VC84,Percent Insured by  Coverage Type; Estimate; HEALTH COVERAGE BY TYPE - Uninsured
+HC05_MOE_VC84,Percent Insured by  Coverage Type; Margin of Error; HEALTH COVERAGE BY TYPE - Uninsured

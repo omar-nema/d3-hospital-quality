@@ -1,0 +1,67 @@
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.axis text{
+   font: 10px monospace;
+}
+.chart text{
+   font: 10px monospace;
+}
+ .secondman {
+  font: 80px monospace;
+  transform: rotate(-90deg);
+}
+
+.chart {
+    transform: scaleX(.8) scaleY(.8);
+}
+
+
+.polyline {
+    fill: none;
+    stroke-width: .1px;
+}
+
+
+/*
+
+.chart {
+    margin: 20px 40px 30px 40px;
+    width: 800px;
+    height: 400px;
+    
+}
+*/
+
+.axis path,
+.axis line {
+  fill: none;
+/*  stroke: #000;*/
+  stroke: black;
+  stroke-width: 4px;
+  shape-rendering: crispEdges;
+  stroke-opacity: 0.20;
+/*   stroke-opacity: 0.5;*/
+
+}
+
+.x.axis path {        
+  display: none;
+}
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 80px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 8px monospace;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}

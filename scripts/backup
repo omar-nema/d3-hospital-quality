@@ -1,0 +1,11 @@
+      var colorscale = d3.scale.linear()
+          .domain([0, numRows])
+           .range(["#00CED1", "#ff5050"]); 
+          // .range(["#00CED1", "#ff5050"]); 
+        //.range(["#ff5050", "#ff5050"]); 
+         // .range(["#00CED1", "red"]); 
+        //.range(["#00CED1", "#ff5050"]); 
+        
+        
+                  //yvalues.domain([500, 25000]);
+     //     yeffficiency.domain([0, 100]);  
