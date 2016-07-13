@@ -1,6 +1,0 @@
-cost,costval,income,incomeval,quality,insured,colorhosp,adjudicated_location_id,description,procedure_code
-0.6593,23.02,0.39,40583,21.6444,0.1576,1,65,Electrocardiogram tracing,93005
-0.6593,23.02,0.39,40583,21.6444,0.1576,2,65,Electrocardiogram tracing,93005
-0.6593,23.02,0.39,40583,21.6444,0.1576,2,65,Electrocardiogram tracing,93005
-0.6593,23.02,0.39,40583,21.6444,0.1576,3,65,Electrocardiogram tracing,93005
-0.6017,21.94,0.39,40921,52.7111,0.6575,4,78,Electrocardiogram tracing,93005

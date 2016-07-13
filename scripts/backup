@@ -9,3 +9,23 @@
         
                   //yvalues.domain([500, 25000]);
      //     yeffficiency.domain([0, 100]);  
+     
+     
+     
+     //
+//  var ycost = d3.scale.linear().range([height, 0]);
+//  // var yincome = d3.scale.linear().range([height, 0]);
+//  var yquality = d3.scale.linear().range([height, 0]);
+//  var ydischarge = d3.scale.linear().range([height, 0]);
+//  var yaxiscost = d3.svg.axis().scale(ycost).orient("left").tickSize(0);
+//  // var yaxisincome = d3.svg.axis().scale(yquality).orient("left").tickSize(0).tickValues([]);
+//  var yaxisquality = d3.svg.axis().scale(ydischarge).orient("left").tickSize(0).tickValues([]);
+//  var yaxisdischarge = d3.svg.axis().scale(ydischarge).orient("left").tickSize(0).tickValues([
+//    ]);
+//
+//  var yefficiency = d3.scale.linear().range([height, 0]);
+//  var ypatexp = d3.scale.linear().range([height, 0]);
+//  var youtcome = d3.scale.linear().range([height, 0]);
+//  var yaxiseff = d3.svg.axis().scale(yquality).orient("left").tickSize(0).tickValues([]);
+//  var yaxispatexp = d3.svg.axis().scale(yquality).orient("left").tickSize(0).tickValues([]);
+//  var yaxisoutcome = d3.svg.axis().scale(yquality).orient("left").tickSize(0).tickValues([]);

@@ -8,8 +8,8 @@ var lineholder = [];
 var chart = d3.select(".chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .append("g");
+//    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function scaleData(data){
     data.forEach(function(d, i){
@@ -48,7 +48,7 @@ d3.csv('/assets/allpercentile.csv',function(data){
         patexp: patexp,
         cost: cost
     };
-    var yAxis = d3.svg.axis().scale(yscale).orient("left").tickSize(0);
+    var yAxis = d3.svg.axis().scale(yscale).orient("left").tickSize(0).tickValues([]);
     
     scaleData(data);
         // data = data.sort(function(a,b){return d3.descending(+a.discharge, +a.quality)});
@@ -76,14 +76,12 @@ d3.csv('/assets/allpercentile.csv',function(data){
         });  
     };
 
-    
-    console.log(getObjectValues(axes));
-    
+    ///axis labels !!
     function generateAxes(){
-            d3.select('.chart').append('g').attr('class', 'axisholder').selectAll('.y-axis').data(getObjectValues(axes) ).enter().append('g').call(yAxis).attr('class', 'y-axis').attr('transform', function(d, i){
+            d3.select('.chart').append('g').attr('class', 'axisholder').selectAll('.y-axis axis').data(getObjectValues(axes) ).enter().append('g').call(yAxis).attr('class', 'y-axis axis').attr('transform', function(d, i){
                 return "translate(" + d + ",0)" 
-            });
- 
+            }).append('text').attr('class', 'y-axis-label').text(function(d, i){return Object.keys(axes)[i]});
+        
     };
     
     //add colors
@@ -92,8 +90,6 @@ d3.csv('/assets/allpercentile.csv',function(data){
                         .style("stroke", 'blue') 
               .attr("points", function(d,i){ return getObjectValues(d.points) } );        
     };
-    
-    
     
     generateData(axes, null) ;
     generateLines();

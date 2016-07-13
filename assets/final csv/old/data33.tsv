@@ -1,8 +1,0 @@
-type	value
-caffeine(mg)	10
-time(min)	20
-energy(joule)	30
-commands(#)	10
-gtime(min)	40
-
-

@@ -5,37 +5,36 @@
     box-sizing: border-box;
 }
 
-.axis text{
-   font: 10px monospace;
-}
-.chart text{
-   font: 10px monospace;
-}
- .secondman {
-  font: 80px monospace;
-  transform: rotate(-90deg);
-}
 
+/*
 .chart {
     transform: scaleX(.8) scaleY(.8);
 }
+*/
 
+.chart {
+    padding: 50px;
+}
+
+.y-axis {
+    position: relative;
+}
+
+.y-axis-label {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    font-size: 18px;
+    letter-spacing: 3px;
+    
+    opacity: .5;
+}
 
 .polyline {
     fill: none;
     stroke-width: .1px;
 }
-
-
-/*
-
-.chart {
-    margin: 20px 40px 30px 40px;
-    width: 800px;
-    height: 400px;
-    
-}
-*/
 
 .axis path,
 .axis line {
@@ -46,22 +45,13 @@
   shape-rendering: crispEdges;
   stroke-opacity: 0.20;
 /*   stroke-opacity: 0.5;*/
+}
 
+.axis {
+    font: 10px Inconsolata;
 }
 
 .x.axis path {        
   display: none;
 }
 
-div.tooltip { 
-    position: absolute;     
-    text-align: center;     
-    width: 80px;          
-    height: 28px;         
-    padding: 2px;       
-    font: 8px monospace;    
-    background: lightsteelblue; 
-    border: 0px;    
-    border-radius: 8px;     
-    pointer-events: none;     
-}
