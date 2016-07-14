@@ -9,33 +9,9 @@ var chart = d3.select(".chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g");
-//    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-function scaleData(data){
-    data.forEach(function(d, i){
-        d.cost = yscale(+d.cost);
-        d.discharge = yscale(+d.discharge);
-        d.patexp = yscale(+d.patexp);
-        d.outcome = yscale(+d.outcome);        
-    });          
-};
-
-
-
-//helper function
-function getObjectValues(input){
-    output = [];
-    for(key in input) {
-        if(input.hasOwnProperty(key)) {
-            var value = input[key];
-            output.push(value);
-        }
-    }
-    return output;   
-};
-    
-
-d3.csv('/assets/allpercentile.csv',function(data){
+var yAxis = d3.svg.axis().scale(yscale).orient("left").tickSize(0).tickValues([]);
+var origData;
+var currData;
 
     var discharge = 0;
     var outcome = width*.4;
@@ -48,55 +24,201 @@ d3.csv('/assets/allpercentile.csv',function(data){
         patexp: patexp,
         cost: cost
     };
-    var yAxis = d3.svg.axis().scale(yscale).orient("left").tickSize(0).tickValues([]);
+
+
+
+function getObjectValues(input){
+    output = [];
+    for(key in input) {
+        if(input.hasOwnProperty(key)) {
+            var value = input[key];
+            output.push(value);
+        }
+    }
+    return output;   
+};
     
-    scaleData(data);
-        // data = data.sort(function(a,b){return d3.descending(+a.discharge, +a.quality)});
-        // data = data.filter(function(d,i){return i>1800});
-        var provMap = {};
-        data.forEach(function(d,i){
-            provMap[i] = d.provider;
+//function scaleData(data){
+//        
+//};
+
+//make a copy here
+
+//get data to unscale
+
+function generateLineData(input, axes){
+    //scale data
+
+    input.forEach(function(d, i){
+        d.cost = yscale(+d.cost);
+        d.discharge = yscale(+d.discharge);
+        d.patexp = yscale(+d.patexp);
+        d.outcome = yscale(+d.outcome);        
+    });      
+    
+    var line = [], pt = {};
+    lineholder = [];
+    input.forEach(function(d,i){ //each row of array corresponds to one line ((x,y) array for each axis)
+        Object.keys(axes).forEach(function(d2, i2){
+           //pt = [axes[d2], +d[d2]];
+            pt[d2] = [axes[d2], +d[d2]];
+        });   
+
+        lineholder.push({points: pt, provider: d.provider, state: d.state});            
+        line = [];
+        pt = {};
+    });  
+    
+    return lineholder;
+};
+
+function generateLines(input){
+    var linehold =  d3.select('.lineholder').selectAll('.polyline').data(input)
+   linehold.enter().append('polyline').attr('class', 'polyline')
+                    .style("stroke", 'blue') 
+          .attr("points", function(d,i){ return getObjectValues(d.points) } );  
+
+    linehold.exit().remove();
+
+
+};
+
+function generateAxes(axes){
+        var axishold = d3.select('.axisholder').selectAll('.y-axis axis').data(getObjectValues(axes) )            
+        axishold.enter().append('g').call(yAxis).attr('class', 'y-axis axis').attr('transform', function(d, i){
+            return "translate(" + d + ",0)" 
         });
-    
-    //allows us to easily filter attributes like name
-    function generateData(axes, filters){
-        var line = [], pt = {};
-        lineholder = [];
-        newData = data;
-        //create master data
-        newData.forEach(function(d,i){ //each row of array corresponds to one line ((x,y) array for each axis)
-            Object.keys(axes).forEach(function(d2, i2){
-               //pt = [axes[d2], +d[d2]];
-                pt[d2] = [axes[d2], +d[d2]];
-            });   
-             
-            lineholder.push({points: pt, provider: d.provider, state: d.state});            
-            line = [];
-            pt = {};
-        });  
-    };
+        axishold.exit().remove();
+            //.append('text').attr('class', 'y-axis-label').text(function(d, i){return Object.keys(axes)[i]});
+};
 
-    ///axis labels !!
-    function generateAxes(){
-            d3.select('.chart').append('g').attr('class', 'axisholder').selectAll('.y-axis axis').data(getObjectValues(axes) ).enter().append('g').call(yAxis).attr('class', 'y-axis axis').attr('transform', function(d, i){
-                return "translate(" + d + ",0)" 
-            }).append('text').attr('class', 'y-axis-label').text(function(d, i){return Object.keys(axes)[i]});
-        
+
+function update(data, axes){
+    generateLines(generateLineData(data, axes));
+    generateAxes(axes);        
+};
+
+
+function initialLoad(){
+    d3.csv('/assets/allpercentile.csv',function(data){ 
+//        var provMap = {};
+//        data.forEach(function(d,i){
+//            provMap[i] = d.provider;
+//        });     
+        update(data, axes);
+       // update(data.filter(function(d,i){return d.state === 'ri'}), axes);  
+  
+        dataDependency(data);  
+
+    });
+}
+
+function dataDependency(origdata){
+    origData = origdata;
+    console.log(filterData(origData));
+    update(filterData(origData), axes);
+//    update(origData.filter(function(d,i){return d.state === 'ri'}), axes);    
+};
+
+initialLoad();
+
+var rangeFilters = {
+    cost: null,
+    discharge: null,
+    outcome: null,
+    patexp: [.3, .5],
+};
+var selectionFilters = {
+    state = 'ri'
+};
+
+function filterData(input, lowerbound, upperbound, equals, type){
+    var filtered = input;
+    var filtervalue;
+    for (filter in rangeFilters){
+    filtervalue = rangeFilters[filter];
+        if (filtervalue){
+            filtered = filtered.filter(function(d,i){return d[filter] < yscale(filtervalue[0]) &&  d[filter]  > yscale(filtervalue[1]) });
+        }     
+    };
+    for (filter in selectionFilters){
+    filtervalue = rangeFilters[filter];
+        if (filtervalue){
+            filtered = filtered.filter(function(d,i){return d[filter] < filtervalue[0] &&  d[filter]  > yscale(filtervalue[1]) });
+        }     
     };
     
-    //add colors
-    function generateLines(){
-        chart.selectAll('lineholder').data(lineholder).enter().append('polyline').attr('class', 'polyline')
-                        .style("stroke", 'blue') 
-              .attr("points", function(d,i){ return getObjectValues(d.points) } );        
-    };
     
-    generateData(axes, null) ;
-    generateLines();
-    generateAxes();
+    return filtered;
+    
+};
     
 
-});
+
+
+
+//var attributeFilters = {
+//    state: [ALL]
+//}
+
+//for each filter in filters
+
+//functionGetInitialFilters() = {
+//    max and min of each value
+//}
+//
+//slider is moved .. 
+//
+//
+//(x, 20, 30, null, cost)
+
+//    if (equals){
+//        return currData = input.filter(function(d,i){return d[type] === equals});       
+//    }
+//    else if (lowerbound && upperbound ){
+//        return currData = input.filter(function(d,i){return d[type] < lowerbound && d[type] > upperbound});          
+//    };
+
+
+
+//issue of applying two filters? dataset < .7, then we say cost > /8
+//anytime filter is changed must register both upper and lower
+
+   
+//    update(data.filter(function(d,i){return d.cost > .7}), axes);
+    
+//sliders
+//    output - 0 to 100 scale
+//attributes - types (state, income > )
+//    always filter original data ? ? ?
+    //or just current data
+
+
+
+
+            // data = data.sort(function(a,b){return d3.descending(+a.discharge, +a.quality)});
+         // var data = data.filter(function(d,i){return d.cost>.9 && d.discharge > 0});
+         
+//    var data = data.filter(function(d,i){return d.state === 'ri'});
+//    
+//    function generateFilter(type, lowerbound, upperbound){
+//        var data = data.filter(function(d,i){return d.cost>.9});
+//    };
+//    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
