@@ -13,20 +13,30 @@ var yAxis = d3.svg.axis().scale(yscale).orient("left").tickSize(0).tickValues([]
 var origData;
 var currData;
 
-    var discharge = 0;
-    var outcome = width*.4;
-    var patexp =  width*.56;
-    var cost = width;
-    
-    var axes = {
-        discharge: discharge,
-        outcome: outcome,
-        patexp: patexp,
-        cost: cost
-    };
+var discharge = 0;
+var outcome = width*.4;
+var patexp =  width*.56;
+var cost = width;
+
+var axes = {
+    discharge: discharge,
+    outcome: outcome,
+    patexp: patexp,
+    cost: cost
+};
+var rangeFilters = {
+    cost: null,
+    discharge: null,
+    outcome: null,
+    patexp: null,
+};
+var selectionFilters = {
+    state: null
+};
 
 
 
+//HELPER FUNCTIONS  
 function getObjectValues(input){
     output = [];
     for(key in input) {
@@ -38,14 +48,7 @@ function getObjectValues(input){
     return output;   
 };
     
-//function scaleData(data){
-//        
-//};
-
-//make a copy here
-
-//get data to unscale
-
+//GENERATE GRAPH FUNCTIONS
 function generateLineData(input, axes){
     //scale data
 
@@ -92,6 +95,13 @@ function generateAxes(axes){
             //.append('text').attr('class', 'y-axis-label').text(function(d, i){return Object.keys(axes)[i]});
 };
 
+///////FILTER FUNCTIONS
+
+function sliderFilterClick(){
+    console.log('ay she click do');
+    
+};
+
 
 function update(data, axes){
     generateLines(generateLineData(data, axes));
@@ -106,33 +116,24 @@ function initialLoad(){
 //            provMap[i] = d.provider;
 //        });     
         update(data, axes);
-       // update(data.filter(function(d,i){return d.state === 'ri'}), axes);  
-  
-        dataDependency(data);  
+        dataDependency(data);  //runs most functions after csv data loaded
 
     });
-}
+};
 
 function dataDependency(origdata){
     origData = origdata;
     console.log(filterData(origData));
     update(filterData(origData), axes);
-//    update(origData.filter(function(d,i){return d.state === 'ri'}), axes);    
+    
+    
+    $('.slider').mouseclick(sliderFilterClick);
 };
 
 initialLoad();
 
-var rangeFilters = {
-    cost: null,
-    discharge: null,
-    outcome: null,
-    patexp: [.3, .5],
-};
-var selectionFilters = {
-    state = 'ri'
-};
 
-function filterData(input, lowerbound, upperbound, equals, type){
+function filterData(input){
     var filtered = input;
     var filtervalue;
     for (filter in rangeFilters){
@@ -142,15 +143,13 @@ function filterData(input, lowerbound, upperbound, equals, type){
         }     
     };
     for (filter in selectionFilters){
-    filtervalue = rangeFilters[filter];
+    filtervalue = selectionFilters[filter];
         if (filtervalue){
-            filtered = filtered.filter(function(d,i){return d[filter] < filtervalue[0] &&  d[filter]  > yscale(filtervalue[1]) });
+            console.log(filtered[filter], filtervalue);
+            filtered = filtered.filter(function(d,i){return d[filter] === filtervalue });
         }     
     };
-    
-    
     return filtered;
-    
 };
     
 
